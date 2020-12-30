@@ -1,5 +1,0 @@
-package locate
-
-func StartLocate() {
-
-}

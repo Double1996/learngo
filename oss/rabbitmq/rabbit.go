@@ -52,6 +52,25 @@ func (q *RabbitMQ) Bind(exchange string) {
 	q.exchange = exchange
 }
 
+
+func (q *RabbitMQ) Send(queue string, body interface{}) {
+	str, err := json.Marshal(body)
+	if err != nil {
+		panic(err)
+	}
+	err = q.channel.Publish(queue,
+		"",
+		false,
+		false,
+		amqp.Publishing{ReplyTo: q.Name,
+			Body: []byte(str),
+		})
+	if err != nil {
+		panic(err)
+	}
+}
+
+
 func (q *RabbitMQ) Publish(exchange string, body interface{}) {
 	str, err := json.Marshal(body)
 	if err != nil {
@@ -82,7 +101,6 @@ func (q *RabbitMQ) Consume() <-chan amqp.Delivery {
 		panic(err)
 	}
 	return c
-
 }
 
 func (q *RabbitMQ) Close() {

@@ -1,9 +1,9 @@
 package main
 
 import (
-	"github.com/double1996/learngo/oss/heartbeat"
-	"github.com/double1996/learngo/oss/locate"
-	"github.com/double1996/learngo/oss/objects"
+	"github.com/double1996/learngo/oss/apiServer/heartbeat"
+	"github.com/double1996/learngo/oss/apiServer/locate"
+	"github.com/double1996/learngo/oss/apiServer/objects"
 	"log"
 	"net/http"
 	"os"
