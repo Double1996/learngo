@@ -2,7 +2,7 @@ package lru
 
 import "container/list"
 
-type LruCache struct {
+type LRUCache struct {
 	Capacity 	int 
 	cache 		map[int]*list.Element
 	list 			*list.List
