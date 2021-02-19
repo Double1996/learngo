@@ -4,7 +4,7 @@
 
 This repository contains code which I used to learn Go. Hoping it can be useful to someone, I've uploaded them here in github.
 
-## [learngo/helloworld](https://github.com/donvito/learngo/tree/master/helloworld)
+## [learngo/leetcode ](https://github.com/double1996/learngo/tree/master/leetcode)
 
 This is a very basic Go application which prints a simple string
 
